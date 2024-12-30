@@ -1,0 +1,25 @@
+<h1>Список пользователей</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Логин</th>
+            <th>Email</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Дата регистрации</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.login_name }}</td>
+                <td>{{ user.email_address }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ user.created_at }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
